@@ -1,6 +1,7 @@
+import sys
 from english_words import english_words_set
 
-anagram = "sueho"
+anagram = sys.argv[1]
 potential_words = []
 
 print(potential_words)
