@@ -1,10 +1,5 @@
 from english_words import english_words_set
 
-word = "test"
-anagram = "sett"
-
-
-
 def check_anagram(anagram, word):
 
     looper = 0
@@ -12,14 +7,18 @@ def check_anagram(anagram, word):
 
     for i in word:
         if anagram[looper] in word:
-            print('Found')
+            continue
         else:
             anagram_check = False
         looper += 1
-        
     return anagram_check
 
-print(anagram_check)
+word_1 = "test"
+anagram_1 = "sett"
 
-for i in english_words_set:
-    print(i)
+word_2 = "random"
+anagram_2 = "settah"
+
+
+print(check_anagram(anagram_1, word_1))
+print(check_anagram(anagram_2, word_2))
