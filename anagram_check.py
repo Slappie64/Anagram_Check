@@ -1,7 +1,7 @@
 import sys
 from english_words import english_words_set
 
-anagram = sys.argv[1]
+anagram = sys.argv[1].lower().replace(' ', '')
 potential_words = []
 
 print(potential_words)
@@ -21,3 +21,4 @@ for word in english_words_set:
         check_anagram(word, anagram)
 
 print(potential_words)
+print(anagram)
