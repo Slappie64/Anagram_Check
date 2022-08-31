@@ -1,22 +1,22 @@
 from english_words import english_words_set
 
-test_word = 'says'
-anagram = "etst"
-check = True
-
+anagram = "sueho"
 potential_words = []
 
+print(potential_words)
 
-for i in english_words_set:
-    if len(anagram) == len(i):
-        for a in i:
-            if a not in anagram:
-                check = False
-        print("{} : {}".format(i, check))
+def check_anagram(word, anagram):
+    check = True
 
-"""
-for a in test_word:
-    if a not in anagram:
-        check = False
-print("{} : {}".format(test_word, check))
-"""
+    for a in word:
+        if a not in anagram:
+            check = False
+    #print("{} : {}".format(word, check))
+    if check == True:        
+        potential_words.append(word)
+
+for word in english_words_set:
+    if len(anagram) == len(word):
+        check_anagram(word, anagram)
+
+print(potential_words)
